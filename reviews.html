@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>媒体一覧・口コミ | 採用レビュー</title>
+  <meta name="description" content="広告媒体の一覧と、ユーザーの口コミをカテゴリ別に閲覧できます。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="header-logo" href="index.html">
+        <svg width="34" height="34" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="21" cy="21" r="11" fill="none" stroke="white" stroke-width="3"/>
+          <line x1="29" y1="30" x2="38" y2="39" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <polygon points="21,13 22.2,17 26.5,17 23.2,19.5 24.4,23.5 21,21 17.6,23.5 18.8,19.5 15.5,17 19.8,17" fill="#4DD9A4"/>
+        </svg>
+        <div class="logo-text-wrap">
+          <div class="logo-name">採用<span>レビュー</span></div>
+          <div class="logo-tagline">人事採用担当者のための採用施策口コミサイト</div>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxXfMuIzpGPsbss---XyRAHWYiXfm2ue7UABuBfPhTopkmUQ/viewform?usp=header" class="btn-post" target="_blank" rel="noopener noreferrer">口コミを投稿する</a>
+    </div>
+  </header>
+
+  <!-- 媒体一覧セクション -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">媒体一覧</h2>
+
+      <!-- カテゴリフィルター -->
+      <div class="filter-wrap category-filter">
+        <button class="filter-btn active" data-category="すべて">すべて</button>
+        <button class="filter-btn" data-category="ナビサイト">ナビサイト</button>
+        <button class="filter-btn" data-category="ダイレクトリクルーティング">ダイレクトリクルーティング</button>
+        <button class="filter-btn" data-category="採用イベント">採用イベント</button>
+        <button class="filter-btn" data-category="SNS運用">SNS運用</button>
+        <button class="filter-btn" data-category="人材紹介">人材紹介</button>
+      </div>
+
+      <!-- 媒体カード一覧（main.js の initMediaListPage() が描画） -->
+      <div id="media-cards" class="cards-grid"></div>
+    </div>
+  </section>
+
+  <!-- 口コミ一覧セクション -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">新着口コミ</h2>
+
+      <!-- 口コミフィルター（会社規模・業種） -->
+      <div class="filter-wrap review-filter">
+        <button class="filter-btn active" data-filter="すべて">すべて</button>
+        <button class="filter-btn" data-filter="50名以下">50名以下</button>
+        <button class="filter-btn" data-filter="50〜200名">50〜200名</button>
+        <button class="filter-btn" data-filter="200〜500名">200〜500名</button>
+        <button class="filter-btn" data-filter="IT・SaaS">IT・SaaS</button>
+        <button class="filter-btn" data-filter="メーカー">メーカー</button>
+      </div>
+
+      <!-- 口コミ一覧（main.js の initReviewsPage() が描画） -->
+      <div id="all-reviews"></div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>© 2026 採用レビュー. All rights reserved.</p>
+    <p>お問い合わせ：<a href="mailto:saiyoureview@gmail.com" style="color:inherit;">saiyoureview@gmail.com</a></p>
+    <p>口コミは投稿者個人の意見であり、当サイトの見解を示すものではありません。掲載情報の正確性・完全性を保証するものではありません。</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

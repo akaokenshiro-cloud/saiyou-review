@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>媒体詳細 | 採用レビュー</title>
+  <meta name="description" content="広告媒体の詳細情報とユーザー口コミを確認できます。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="header-logo" href="index.html">
+        <svg width="34" height="34" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="21" cy="21" r="11" fill="none" stroke="white" stroke-width="3"/>
+          <line x1="29" y1="30" x2="38" y2="39" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <polygon points="21,13 22.2,17 26.5,17 23.2,19.5 24.4,23.5 21,21 17.6,23.5 18.8,19.5 15.5,17 19.8,17" fill="#4DD9A4"/>
+        </svg>
+        <div class="logo-text-wrap">
+          <div class="logo-name">採用<span>レビュー</span></div>
+          <div class="logo-tagline">人事採用担当者のための採用施策口コミサイト</div>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxXfMuIzpGPsbss---XyRAHWYiXfm2ue7UABuBfPhTopkmUQ/viewform?usp=header" class="btn-post" target="_blank" rel="noopener noreferrer">口コミを投稿する</a>
+    </div>
+  </header>
+
+  <!-- 媒体詳細 -->
+  <section class="section">
+    <div class="container">
+
+      <!-- パンくずリスト -->
+      <nav class="breadcrumb">
+        <a href="index.html">ホーム</a>
+        <span><a href="reviews.html">媒体一覧</a></span>
+        <span>媒体詳細</span>
+      </nav>
+
+      <!-- 詳細コンテンツ（main.js の initDetailPage() が描画） -->
+      <div id="detail-content"></div>
+
+      <!-- 関連口コミ -->
+      <h2 class="section-title">この媒体の口コミ</h2>
+      <div id="related-reviews"></div>
+
+      <div style="text-align:center; margin-top:32px;">
+        <a href="reviews.html" class="btn-primary">← 媒体一覧に戻る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>© 2026 採用レビュー. All rights reserved.</p>
+    <p>お問い合わせ：<a href="mailto:saiyoureview@gmail.com" style="color:inherit;">saiyoureview@gmail.com</a></p>
+    <p>口コミは投稿者個人の意見であり、当サイトの見解を示すものではありません。掲載情報の正確性・完全性を保証するものではありません。</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

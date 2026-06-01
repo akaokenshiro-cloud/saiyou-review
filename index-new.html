@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>採用レビュー | 採用施策口コミサイト</title>
+  <meta name="description" content="人事採用担当者のための採用施策口コミサイト。実際に使った媒体・手法のリアルな評価が集まります。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap">
+  <style>
+    /* ============================================================
+       新ヒーローセクション（白背景・2カラム）
+       ============================================================ */
+    .hero-new {
+      position: relative;
+      background: #ffffff;
+      padding: 72px 40px 64px;
+      overflow: hidden;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    /* 背景の薄い「採用」テキスト */
+    .hero-new::before {
+      content: '採用';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 320px;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 0.03);
+      letter-spacing: -0.05em;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      z-index: 0;
+    }
+
+    .hero-new-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    /* 左カラム */
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-new h1 {
+      font-size: 34px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .hero-new h1 .title-green {
+      color: #1D9E75;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .hero-thought {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      color: #888;
+      line-height: 1.9;
+      padding-left: 14px;
+      border-left: 2px solid #1D9E75;
+      margin: 0;
+    }
+
+    /* 右カラム */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 検索バー */
+    .hero-new-search {
+      display: flex;
+      gap: 0;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .hero-new-search .search-input {
+      flex: 1;
+      border: none;
+      padding: 13px 16px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      background: transparent;
+    }
+
+    .hero-new-search .search-btn {
+      background: #1B3A6B;
+      color: #fff;
+      border: none;
+      padding: 0 22px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+
+    .hero-new-search .search-btn:hover {
+      background: #102545;
+    }
+
+    /* カテゴリタグ */
+    .hero-new-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hero-new-tag {
+      font-size: 11px;
+      color: #1D9E75;
+      background: #f0f9f5;
+      border: 1px solid #b2e0cf;
+      border-radius: 20px;
+      padding: 5px 13px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .hero-new-tag:hover {
+      background: #d8f2e9;
+    }
+
+    /* 統計カード3つ */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .hero-stat-card {
+      background: #f8f9fb;
+      border: 1px solid #e4e8ef;
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+
+    .hero-stat-num {
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1B3A6B;
+      line-height: 1.2;
+    }
+
+    .hero-stat-num.stat-text {
+      font-size: 14px;
+    }
+
+    .hero-stat-label {
+      display: block;
+      font-size: 10px;
+      color: #888;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .hero-new {
+        padding: 48px 20px 40px;
+      }
+
+      .hero-new-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .hero-new h1 {
+        font-size: 26px;
+      }
+
+      .hero-new::before {
+        font-size: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="header-logo" href="index.html">
+        <svg width="34" height="34" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="21" cy="21" r="11" fill="none" stroke="white" stroke-width="3"/>
+          <line x1="29" y1="30" x2="38" y2="39" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <polygon points="21,13 22.2,17 26.5,17 23.2,19.5 24.4,23.5 21,21 17.6,23.5 18.8,19.5 15.5,17 19.8,17" fill="#4DD9A4"/>
+        </svg>
+        <div class="logo-text-wrap">
+          <div class="logo-name">採用<span>レビュー</span></div>
+          <div class="logo-tagline">人事採用担当者のための採用施策口コミサイト</div>
+        </div>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxXfMuIzpGPsbss---XyRAHWYiXfm2ue7UABuBfPhTopkmUQ/viewform?usp=header" class="btn-post" target="_blank" rel="noopener noreferrer">口コミを投稿する</a>
+    </div>
+  </header>
+
+  <!-- 新ヒーロー -->
+  <section class="hero-new">
+    <div class="hero-new-inner">
+
+      <!-- 左カラム -->
+      <div class="hero-left">
+        <h1>
+          採用施策を選ぶ前に、<br>
+          <span class="title-green">他社の本音を聞こう</span>
+        </h1>
+        <p class="hero-sub">人事担当者が実際に使った媒体・手法のリアルな口コミが集まるサイトです</p>
+        <p class="hero-thought">採用媒体選びで他社の本音がわからず困った経験から作りました。</p>
+      </div>
+
+      <!-- 右カラム -->
+      <div class="hero-right">
+        <div class="hero-new-search">
+          <input type="text" id="hero-search-input" class="search-input" placeholder="媒体名・手法名で検索（例：OfferBox）">
+          <button class="search-btn" onclick="doSearch()">検索</button>
+        </div>
+
+        <div class="hero-new-tags">
+          <a href="reviews.html?category=ナビサイト" class="hero-new-tag">ナビサイト</a>
+          <a href="reviews.html?category=ダイレクトリクルーティング" class="hero-new-tag">ダイレクトリクルーティング</a>
+          <a href="reviews.html?category=採用イベント" class="hero-new-tag">採用イベント</a>
+          <a href="reviews.html?category=SNS運用" class="hero-new-tag">SNS運用</a>
+          <a href="reviews.html?category=人材紹介" class="hero-new-tag">人材紹介</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat-card">
+            <span class="hero-stat-num">0</span>
+            <span class="hero-stat-label">口コミ件数</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num">27</span>
+            <span class="hero-stat-label">掲載媒体・施策数</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num stat-text">全て無料</span>
+            <span class="hero-stat-label">登録不要で閲覧可能</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- カテゴリから探す -->
+  <section class="category-section">
+    <div class="container">
+      <h2 class="category-section-title">カテゴリから探す</h2>
+      <div class="category-grid">
+        <!-- ナビサイト：求人票リストのアイコン -->
+        <a class="category-item" href="reviews.html?category=ナビサイト">
+          <div class="category-circle">
+            <svg width="64" height="64" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="3" width="20" height="22" rx="2" stroke="#1B3A6B" stroke-width="1.8" fill="none"/>
+              <line x1="8" y1="9" x2="20" y2="9" stroke="#1B3A6B" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="8" y1="13" x2="20" y2="13" stroke="#1B3A6B" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="8" y1="17" x2="15" y2="17" stroke="#1B3A6B" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="21" cy="21" r="4" fill="#1B3A6B"/>
+              <line x1="19.5" y1="21" x2="22.5" y2="21" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+              <line x1="21" y1="19.5" x2="21" y2="22.5" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="category-name">ナビサイト</span>
+        </a>
+
+        <!-- ダイレクトリクルーティング：人物に矢印のアイコン -->
+        <a class="category-item" href="reviews.html?category=ダイレクトリクルーティング">
+          <div class="category-circle">
+            <svg width="64" height="64" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="9" r="4" stroke="#1B3A6B" stroke-width="1.8" fill="none"/>
+              <path d="M3 23c0-4 3-6 7-6s7 2 7 6" stroke="#1B3A6B" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+              <line x1="19" y1="10" x2="26" y2="10" stroke="#1B3A6B" stroke-width="1.8" stroke-linecap="round"/>
+              <polyline points="23,7 26,10 23,13" stroke="#1B3A6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <span class="category-name">ダイレクトリクルーティング</span>
+        </a>
+
+        <!-- 採用イベント：カレンダーのアイコン -->
+        <a class="category-item" href="reviews.html?category=採用イベント">
+          <div class="category-circle">
+            <svg width="64" height="64" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="6" width="22" height="19" rx="2" stroke="#1B3A6B" stroke-width="1.8" fill="none"/>
+              <line x1="3" y1="12" x2="25" y2="12" stroke="#1B3A6B" stroke-width="1.8"/>
+              <line x1="9" y1="3" x2="9" y2="9" stroke="#1B3A6B" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="19" y1="3" x2="19" y2="9" stroke="#1B3A6B" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="9" cy="18" r="1.5" fill="#1B3A6B"/>
+              <circle cx="14" cy="18" r="1.5" fill="#1B3A6B"/>
+              <circle cx="19" cy="18" r="1.5" fill="#1B3A6B"/>
+            </svg>
+          </div>
+          <span class="category-name">採用イベント</span>
+        </a>
+
+        <!-- SNS運用：スマホ＋吹き出しのアイコン -->
+        <a class="category-item" href="reviews.html?category=SNS運用">
+          <div class="category-circle">
+            <svg width="64" height="64" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="6" r="3" fill="#1B3A6B"/>
+              <circle cx="5" cy="21" r="3" fill="#1B3A6B"/>
+              <circle cx="23" cy="21" r="3" fill="#1B3A6B"/>
+              <line x1="14" y1="9" x2="5.8" y2="18.2" stroke="#1B3A6B" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="14" y1="9" x2="22.2" y2="18.2" stroke="#1B3A6B" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="7.8" y1="21" x2="20.2" y2="21" stroke="#1B3A6B" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="category-name">SNS運用</span>
+        </a>
+
+        <!-- 人材紹介：人物＋ブリーフケースのアイコン -->
+        <a class="category-item" href="reviews.html?category=人材紹介">
+          <div class="category-circle">
+            <svg width="64" height="64" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="8" r="4" stroke="#1B3A6B" stroke-width="1.8" fill="none"/>
+              <path d="M5 24c0-5 4-7 9-7s9 2 9 7" stroke="#1B3A6B" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <span class="category-name">人材紹介</span>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="reviews.html" class="btn-all-category">すべてのカテゴリを見る &nbsp;›</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 評価の高い媒体 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">掲載媒体</h2>
+      <div id="featured-cards" class="cards-grid"></div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="reviews.html" class="btn-primary">すべての媒体を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新着口コミ -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title">新着口コミ</h2>
+      <div id="latest-reviews"></div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="reviews.html" class="btn-primary">すべての口コミを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- このサイトでできること -->
+  <section class="section" style="background:#f5faf7; padding-top:48px; padding-bottom:48px;">
+    <div class="container">
+      <h2 class="section-title">このサイトでできること</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px;">
+        <div class="review-card" style="margin-bottom:0;">
+          <h3 style="margin-bottom:8px;">媒体・施策の口コミを読む</h3>
+          <p style="color:#555; font-size:.9rem;">実際に採用活動で使った人事担当者のリアルな評価・感想を確認できます。</p>
+        </div>
+        <div class="review-card" style="margin-bottom:0;">
+          <h3 style="margin-bottom:8px;">自社に似た企業の事例を探す</h3>
+          <p style="color:#555; font-size:.9rem;">業界・企業規模・予算感でフィルタリングして、条件の近い企業の口コミを探せます。</p>
+        </div>
+        <div class="review-card" style="margin-bottom:0;">
+          <h3 style="margin-bottom:8px;">施策選びの失敗を減らす</h3>
+          <p style="color:#555; font-size:.9rem;">他社が実際に試して感じたコスト・工数・効果を参考に、施策選びの精度を上げられます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>© 2026 採用レビュー. All rights reserved.</p>
+    <p>お問い合わせ：<a href="mailto:saiyoureview@gmail.com" style="color:inherit;">saiyoureview@gmail.com</a></p>
+    <p>口コミは投稿者個人の意見であり、当サイトの見解を示すものではありません。掲載情報の正確性・完全性を保証するものではありません。</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
