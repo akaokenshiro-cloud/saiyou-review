@@ -217,8 +217,9 @@ body {
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 540px;
-  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .hero h1 {
@@ -239,8 +240,8 @@ body {
 .hero-search {
   display: flex;
   gap: 0;
-  max-width: 520px;
-  margin: 0 auto;
+  max-width: 560px;
+  margin: 0 auto 16px;
   border: 1.5px solid #c8e8db;
   border-radius: 8px;
   overflow: hidden;
