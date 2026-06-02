@@ -116,12 +116,25 @@ body {
    ヒーローセクション（白背景・検索ボックス）
    ============================================================ */
 .hero {
+  background: #f7f9f8;
   position: relative;
-  background: #f0f9f5;
-  padding: 52px 40px 44px;
   overflow: hidden;
-  text-align: center;
-  border-bottom: 0.5px solid #c8e8db;
+}
+
+/* ヒーローウォーターマーク */
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 160px;
+  font-weight: 700;
+  color: #1D9E75;
+  opacity: 0.05;
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* ヒーロー 2カラムレイアウト */
