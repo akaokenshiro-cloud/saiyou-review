@@ -124,6 +124,73 @@ body {
   border-bottom: 0.5px solid #c8e8db;
 }
 
+/* ヒーロー 2カラムレイアウト */
+.hero-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* モックアップエリア */
+.hero-mockup {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  height: 220px;
+}
+
+.mockup-card {
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  width: 220px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.mockup-card.offset  { top: 60px;  left: 30px; }
+.mockup-card.offset2 { top: 120px; left: 60px; }
+
+.mockup-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.mockup-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mockup-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.mockup-stars {
+  font-size: 11px;
+  color: #f59e0b;
+}
+
+.mockup-bar {
+  height: 7px;
+  background: #e8f0fe;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.mockup-bar.short { width: 60%; }
+
 .hero-pattern {
   position: absolute;
   top: 0;
@@ -137,8 +204,8 @@ body {
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 540px;
+  text-align: left;
 }
 
 .hero h1 {
@@ -738,6 +805,9 @@ body {
   .search-btn { border-left: none; border-top: 1.5px solid var(--color-border); }
 
   .hero { padding: 56px 20px; }
+  .hero-body { flex-direction: column; }
+  .hero-inner { text-align: center; max-width: 100%; }
+  .hero-mockup { display: none; }
 
   .cards-grid { grid-template-columns: 1fr; }
 
